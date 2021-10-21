@@ -46,7 +46,7 @@ In the expression covered in this tutorial, there are several quantifiers we can
 
 * Due to the different placing, this quanitifier has a slightly different role because it validates the entire group present within the parathesis. It will match zero to one time, meanning that it will match weather the https:// or http:// is present or absent. For example, both of the below URLs will match:
 
-* ``` 
+``` 
 https://www.github.com
 www.github.com
 ```
@@ -63,7 +63,7 @@ www.github.com
 
 * This quantifier preceeds the ```[a-z\.]``` which means the domain must be within 2-6 characters. Here are some examples: 
 
-* ```
+```
 .com
 .co
 .edu
