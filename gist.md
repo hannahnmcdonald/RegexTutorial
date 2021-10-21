@@ -160,12 +160,12 @@ Character Escapes means an escaping backslash mush be present before special fun
 
 Below are some of the helpful resources that helped me understand Regex and were helpful in the making of this tutorial:
 
-[Request-Response: A Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)
+- [Request-Response: A Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)
 
-[Microsoft Docs- Regular Expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions)
+- [Microsoft Docs- Regular Expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions)
 
-[Regex 101](https://regex101.com/)
+- [Regex 101](https://regex101.com/)
 
-[Introduction to Regular Expressions- Youtube](https://www.youtube.com/watch?v=7DG3kCDx53c)
+- [Introduction to Regular Expressions- Youtube](https://www.youtube.com/watch?v=7DG3kCDx53c)
 
-[Regex for URL](https://ihateregex.io/expr/url/)
+- [Regex for URL](https://ihateregex.io/expr/url/)
