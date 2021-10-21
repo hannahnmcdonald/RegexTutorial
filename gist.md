@@ -46,8 +46,10 @@ In the expression covered in this tutorial, there are several quantifiers we can
 
 * Due to the different placing, this quanitifier has a slightly different role because it validates the entire group present within the parathesis. It will match zero to one time, meanning that it will match weather the https:// or http:// is present or absent. For example, both of the below URLs will match:
 
-* https://www.github.com
-* www.github.com
+* ``` 
+https://www.github.com
+www.github.com
+```
 
 3. The next quantifier is the ```+``` 
 
@@ -61,9 +63,11 @@ In the expression covered in this tutorial, there are several quantifiers we can
 
 * This quantifier preceeds the ```[a-z\.]``` which means the domain must be within 2-6 characters. Here are some examples: 
 
-```.com```
-```.co```
-```.edu```
+* ```
+.com
+.co
+.edu
+```
 
 5. The last quantifier type in this expression is the ```*``` which is present two times in this expression
 
@@ -71,8 +75,9 @@ In the expression covered in this tutorial, there are several quantifiers we can
 
 * One time it is within parenthesis and one time outside which have different functions. The ```*``` will match zero or more times and preceeding the first ```*``` is ```[\/\w \.-]``` which means it will match any leangth string after the ```.com```, ```.edu```, etc. It can be blank or very very long.
 
-* Here are som examples:
+* Here are some examples:
 
+* 
 ```
 www.github.com/hannahnmcdonald
 
