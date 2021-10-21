@@ -38,53 +38,53 @@ In the expression covered in this tutorial, there are several quantifiers we can
 
 1. The first quantifier in this expression is the ```?``` character in /^(https```?```:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 
-* ```?``` will match zero to one time, which means it will match even if the item is ommitted. The quantifier is preceeded by the ```s``` which in turn means that the URL can start with either ```http``` or ```https```, but ```httpf``` will not match.  
+    * ```?``` will match zero to one time, which means it will match even if the item is ommitted. The quantifier is preceeded by the ```s``` which in turn means that the URL can start with either ```http``` or ```https```, but ```httpf``` will not match.  
 
 2. The second quantifier in this expression is also the ```?``` character, but this time it follows a group of characters in parenthesis. 
 
-* /^(https?:\/\/)```?```([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+    * /^(https?:\/\/)```?```([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 
-* Due to the different placing, this quanitifier has a slightly different role because it validates the entire group present within the parathesis. It will match zero to one time, meanning that it will match weather the https:// or http:// is present or absent. For example, both of the below URLs will match:
+    * Due to the different placing, this quanitifier has a slightly different role because it validates the entire group present within the parathesis. It will match zero to one time, meanning that it will match weather the https:// or http:// is present or absent. For example, both of the below URLs will match:
 
-``` 
-https://www.github.com
-www.github.com
-```
+    ``` 
+    https://www.github.com
+    www.github.com
+    ```
 
 3. The next quantifier is the ```+``` 
 
-* /^(https?:\/\/)?([\da-z\.-]```+```)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+    * /^(https?:\/\/)?([\da-z\.-]```+```)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 
-* The ```+``` means it matches one or more times. This means that the item preceeding it must occur atleast once but can occur an infinite amount of time. The preceeding item is the following ```[\da-z\.]``` which means the match will work for any given string between the ```https://``` and the last ```.``` before ```com``` or ```org```.
+    * The ```+``` means it matches one or more times. This means that the item preceeding it must occur atleast once but can occur an infinite amount of time. The preceeding item is the following ```[\da-z\.]``` which means the match will work for any given string between the ```https://``` and the last ```.``` before ```com``` or ```org```.
 
 4. The curly bracket quantifier seen as the ```{2,6}``` in this expression matches the amount of times within the bracket. The comma in the middle signifies it will match an amount of times between the two numbers. In our case, it will match between 2 and 6 times.
 
-* /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]```{2,6}```)([\/\w \.-]*)*\/?$/
+    * /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]```{2,6}```)([\/\w \.-]*)*\/?$/
 
-* This quantifier preceeds the ```[a-z\.]``` which means the domain must be within 2-6 characters. Here are some examples: 
+    * This quantifier preceeds the ```[a-z\.]``` which means the domain must be within 2-6 characters. Here are some examples: 
 
-```
-.com
-.co
-.edu
-```
+    ```
+    .com
+    .co
+    .edu
+    ```
 
 5. The last quantifier type in this expression is the ```*``` which is present two times in this expression
 
-* /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]```*```)```*```\/?$/
+    * /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]```*```)```*```\/?$/
 
-* One time it is within parenthesis and one time outside which have different functions. The ```*``` will match zero or more times and preceeding the first ```*``` is ```[\/\w \.-]``` which means it will match any leangth string after the ```.com```, ```.edu```, etc. It can be blank or very very long.
+    * One time it is within parenthesis and one time outside which have different functions. The ```*``` will match zero or more times and preceeding the first ```*``` is ```[\/\w \.-]``` which means it will match any leangth string after the ```.com```, ```.edu```, etc. It can be blank or very very long.
 
-* Here are some examples:
+    * Here are some examples:
 
-* 
-```
-www.github.com/hannahnmcdonald
+    * 
+    ```
+    www.github.com/hannahnmcdonald
 
-https://duckduckgo.com/?q=corgi+nose&t=brave&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F51%2F03%2F0d%2F51030d5e51de3a95ff78117a50f13bc4.jpg
-```
+    https://duckduckgo.com/?q=corgi+nose&t=brave&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F51%2F03%2F0d%2F51030d5e51de3a95ff78117a50f13bc4.jpg
+    ```
 
-* The second ```*``` in the expression preceeds the group of characters ```([\/\w \.-]*)``` which is preceeding the entire group in parenthesis which means it will match the url with many levels seperated by ```/``` after the root of the url.
+    * The second ```*``` in the expression preceeds the group of characters ```([\/\w \.-]*)``` which is preceeding the entire group in parenthesis which means it will match the url with many levels seperated by ```/``` after the root of the url.
 
 
 ### Grouping Constructs
@@ -94,23 +94,23 @@ Below are each of the grouping constructs explained.
 
 1. ```(https?:\/\/)```
 
-* This group will only match if the following are found:
-- The string ```http```
-- ```s``` which may or may not be present due to its quantifier ```?```
-- The colon ```:```
-- Two forward slashes ```//``` written in this expression as ```\/\/```
+    * This group will only match if the following are found:
+        - The string ```http```
+        - ```s``` which may or may not be present due to its quantifier ```?```
+        - The colon ```:```
+        - Two forward slashes ```//``` written in this expression as ```\/\/```
 
 2. ```([\da-z\.-]+)```
 
-* The characters in this expression mean it will match if the string contains at minimum one of the characters in the expression due to its quantifier ```+````
+    * The characters in this expression mean it will match if the string contains at minimum one of the characters in the expression due to its quantifier ```+````
 
 3. ```([a-z\.]{2,6}```
 
-* This group contains a bracket and a quantifier which means it will match only if the number of characters match the quantifier (2-6) and must be from the characters in the brackets (a-z).
+    * This group contains a bracket and a quantifier which means it will match only if the number of characters match the quantifier (2-6) and must be from the characters in the brackets (a-z).
 
 4. ```([\/\w \.-]*)```
 
-* This group along with its quantifier means that it will match with an exmpty string or any string where the characters are the same as between the brackets.
+    * This group along with its quantifier means that it will match with an exmpty string or any string where the characters are the same as between the brackets.
 
 ### Bracket Expressions
 
