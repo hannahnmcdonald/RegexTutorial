@@ -87,8 +87,30 @@ https://duckduckgo.com/?q=corgi+nose&t=brave&iar=images&iax=images&ia=images&iai
 * The second ```*``` in the expression preceeds the group of characters ```([\/\w \.-]*)``` which is preceeding the entire group in parenthesis which means it will match the url with many levels seperated by ```/``` after the root of the url.
 
 
-
 ### Grouping Constructs
+
+Grouping constructs are seperated by paranthesis are helpful in breaking down this Regex expression into several parts.
+Below are each of the grouping constructs explained.
+
+1. ```(https?:\/\/)```
+
+* This group will only match if the following are found:
+- The string ```http```
+- ```s``` which may or may not be present due to its quantifier ```?```
+- The colon ```:```
+- Two forward slashes ```//``` written in this expression as ```\/\/```
+
+2. ```([\da-z\.-]+)```
+
+* The characters in this expression mean it will match if the string contains at minimum one of the characters in the expression due to its quantifier ```+````
+
+3. ```([a-z\.]{2,6}```
+
+* This group contains a bracket and a quantifier which means it will match only if the number of characters match the quantifier (2-6) and must be from the characters in the brackets (a-z).
+
+4. ```([\/\w \.-]*)```
+
+* This group along with its quantifier means that it will match with an exmpty string or any string where the characters are the same as between the brackets.
 
 ### Bracket Expressions
 
@@ -98,4 +120,4 @@ https://duckduckgo.com/?q=corgi+nose&t=brave&iar=images&iax=images&ia=images&iai
 
 ## Author
 
-Hannah is a student at Georgia Tech's Full Stack Coding Bootcamp. You can reach her at hannahcodes@protonmail.com or find her github profile [here.](https://github.com/hannahnmcdonald)
+ 👩🏼‍💻 Hannah is a student at Georgia Tech's Full Stack Coding Bootcamp. You can email her at hannahcodes@protonmail.com 📪 or find her github profile [here.](https://github.com/hannahnmcdonald) ✨
