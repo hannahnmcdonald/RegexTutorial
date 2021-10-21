@@ -67,15 +67,17 @@ In the expression covered in this tutorial, there are several quantifiers we can
 
 5. The last quantifier type in this expression is the ```*``` which is present two times in this expression
 
-* ```/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]```*```)```*```\/?$/
+* /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]```*```)```*```\/?$/
 
 * One time it is within parenthesis and one time outside which have different functions. The ```*``` will match zero or more times and preceeding the first ```*``` is ```[\/\w \.-]``` which means it will match any leangth string after the ```.com```, ```.edu```, etc. It can be blank or very very long.
 
 * Here are som examples:
 
-```www.github.com/hannahnmcdonald```
-or 
-```https://duckduckgo.com/?q=corgi+nose&t=brave&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F51%2F03%2F0d%2F51030d5e51de3a95ff78117a50f13bc4.jpg```
+```
+www.github.com/hannahnmcdonald
+
+https://duckduckgo.com/?q=corgi+nose&t=brave&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F51%2F03%2F0d%2F51030d5e51de3a95ff78117a50f13bc4.jpg
+```
 
 * The second ```*``` in the expression preceeds the group of characters ```([\/\w \.-]*)``` which is preceeding the entire group in parenthesis which means it will match the url with many levels seperated by ```/``` after the root of the url.
 
