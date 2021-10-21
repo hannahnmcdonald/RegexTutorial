@@ -158,7 +158,7 @@ Character Escapes means an escaping backslash mush be present before special fun
 
 ## Resources
 
-Below are some of the helpful resources used in the making of this tutorial:
+Below are some of the helpful resources that helped me understand Regex and were helpful in the making of this tutorial:
 
 [Request-Response: A Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)
 
@@ -167,3 +167,5 @@ Below are some of the helpful resources used in the making of this tutorial:
 [Regex 101](https://regex101.com/)
 
 [Introduction to Regular Expressions- Youtube](https://www.youtube.com/watch?v=7DG3kCDx53c)
+
+[Regex for URL](https://ihateregex.io/expr/url/)
