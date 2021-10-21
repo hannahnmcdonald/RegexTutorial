@@ -114,6 +114,28 @@ Below are each of the grouping constructs explained.
 
 ### Bracket Expressions
 
+Bracket expressions demonstrate a range of characters that would need to be matched.
+
+1. ```[\da-z\.-]```
+
+    * ```\d``` means any numeric character
+    * ```a-z``` means any lowercase letter
+    * ```\.``` means a period is neccessary
+    * ```-``` means a hyphen is needed
+
+2. ```[a-z\.]```
+
+    * ```a-z``` means any lowercase letter
+    * ```\.``` means a period is neccessary
+ 
+3. ```[\/\w \.-]```
+
+    * ```\/``` a forward slash is needed
+    * ```\w``` any alphanumeric character
+    * ```" "``` a space
+    * ```\.``` a period
+    * ```-``` a hyphen
+
 ### Character Classes
 
 ### Character Escapes
