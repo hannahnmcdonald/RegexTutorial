@@ -1,6 +1,8 @@
-# Regex Tutorial
+# Regex Tutorial - URL Validation
 
 Regex, or Regular Expression Syntax, is a useful tool for any web developer. Regular Expressions define a search pattern and are very useful for form input validation, web scraping, and filtering information. Regex may appear intimidating initially, but they can be broken down into smaller components so they can be more easily understood.
+
+Link to Github Gist [here](https://gist.github.com/hannahnmcdonald/87adc54ae8e576f60e8cae1ed5deff64)
 
 ## Summary
 
@@ -14,6 +16,7 @@ In this gist, I will be explaining Regex used for matching a URL. Using Regex to
 - [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
 - [Character Escapes](#character-escapes)
+- [Resources](#resouces)
 
 ## Regex Components
 
@@ -26,7 +29,6 @@ This does not validate that the URL is actually operational or connects to a web
 THe anchors are the beginning and the end of this regex expression. The anchors are immediately betweent the forward slashes at the beginning and end of the expression. The beginning anchor is the ```^``` character and the ending anchor is the ```$``` character. Below they are highlighted as part of the expression.
 
 /```^```(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?```$```/
-
 
 ### Quantifiers
 
@@ -86,7 +88,6 @@ In the expression covered in this tutorial, there are several quantifiers we can
 
     * The second ```*``` in the expression preceeds the group of characters ```([\/\w \.-]*)``` which is preceeding the entire group in parenthesis which means it will match the url with many levels seperated by ```/``` after the root of the url.
 
-
 ### Grouping Constructs
 
 Grouping constructs are seperated by paranthesis are helpful in breaking down this Regex expression into several parts.
@@ -138,8 +139,31 @@ Bracket expressions demonstrate a range of characters that would need to be matc
 
 ### Character Classes
 
+* This expression has 3 different character classes:
+
+1. ```\d``` matches with any number character ```0-9```
+2. ```\w``` matches any alphanumeric character including the underscore: ```a-z```, ```A-Z```, ```0-9```, and ```_```.
+3. ```a-z``` matches with any lowercase alphabetic character
+
 ### Character Escapes
+
+Character Escapes means an escaping backslash mush be present before special function characters for the Regex to look for strings. There are two in this Regex Expression:
+
+1. ```\/``` used to match with a forward slash ```/```
+2. ```\.``` used to match with a period ```.```
 
 ## Author
 
- 👩🏼‍💻 Hannah is a student at Georgia Tech's Full Stack Coding Bootcamp. You can email her at hannahcodes@protonmail.com 📪 or find her github profile [here.](https://github.com/hannahnmcdonald) ✨
+👩🏼‍💻 Hannah is a student at Georgia Tech's Full Stack Coding Bootcamp. You can email her at hannahcodes@protonmail.com 📪 or find her github profile [here.](https://github.com/hannahnmcdonald) ✨
+
+## Resources
+
+Below are some of the helpful resources used in the making of this tutorial:
+
+[Request-Response: A Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)
+
+[Microsoft Docs- Regular Expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions)
+
+[Regex 101](https://regex101.com/)
+
+[Introduction to Regular Expressions- Youtube](https://www.youtube.com/watch?v=7DG3kCDx53c)
